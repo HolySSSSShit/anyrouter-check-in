@@ -149,7 +149,7 @@ def get_user_info(client, headers, user_info_url: str):
 				}
 		return {'success': False, 'error': f'Failed to get user info: HTTP {response.status_code}'}
 	except Exception as e:
-		return {'success': False, 'error': f'Failed to get user info: {str(e)}... 响应内容：{response.text}'}
+		return {'success': False, 'error': f'Failed to get user info: {response.text}'}
 
 
 async def prepare_cookies(account_name: str, provider_config, user_cookies: dict) -> dict | None:
